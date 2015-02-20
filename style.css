@@ -1,0 +1,43 @@
+.container div {
+  display: none;
+  background-color: white;
+  opacity: 0.85;
+  filter: alpha(opacity=40);
+  border-radius: 3px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  background-color: white;
+  opacity: 0.85;
+  filter: alpha(opacity=40);
+  border-radius: 3px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar_position {
+  background-color: white;
+  opacity: 0.75;
+  filter: alpha(opacity=40);
+  border-radius: 3px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visible {
+  display: block !important;
+}
+
+body {
+    background-image: url("http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-48323.jpg");
+}
+
+div {
+   text-align: center;
+   font-family: Cambria;
+}

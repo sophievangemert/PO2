@@ -1,0 +1,137 @@
+
+ <div class= "header">
+  <h2> Rekenmachines </h2>
+</div>
+  <div class="navbar_position">
+    <b><div onClick="toggleVissilbe('#home')" class="navbar"> Home </div>
+    <div onClick="toggleVissilbe('#makers')" class="navbar"> De makers </div>
+    <div onClick="toggleVissilbe('#decimaal_binair')" class= "navbar"> Decimaal - Binair en andersom </div>
+    
+    <div onClick="toggleVissilbe('#euro_dollar')" class= "navbar"> Euro - Dollar en andersom </div> 
+      <div onClick="toggleVissilbe('#regulier')" class= "navbar"> Reguliere rekenmachine </div>
+    <div onClick="toggleVissilbe('#inkomen')" class="navbar"> Inkomen </div> </b>
+  </div>
+</div>
+  <div class="container">
+    <div id="home" class="visible">
+      <p> Voor dit PO hebben wij vier rekenmachines ontworpen: </p>
+        
+          <li> Decimaal - Binair en andersom </li>
+          <li> Euro - Dollar en andersom </li>
+         <li> Reguliere rekenmachine </li>
+       <li> Inkomen </li>
+    <br><br>
+        
+    </div>
+    <div id="decimaal_binair" class="hidden">
+      <p> Welkom op de pagina met de rekenmachine die decimale getallen omrekent naar binaire getallen. </p>
+
+      <form name="decimaal_binair">
+        <input type="radio" id="dec-bin" name="decimaal_binair">Selecteer deze optie om van decimaal naar binair te converteren. <br><br>
+        <input type="radio" id="bin-dec" name="decimaal_binair">Selecteer deze optie om van binair naar decimaal te converteren.<br><br>
+        <input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" placeholder="Voer hier uw getal in...">
+        <input type="button" value="Zet om!" onclick="dec2bin()" >
+      </form>
+    <!--Hier is het de bedoeling dat je een getal invoert hier en deze wordt opgeslagen en 
+    omgerekent zodra je op de knop zet om klikt. Als je een breuk invoert zal hij de boodschap 
+    geven dat dit niet kan, dit kan je hieronder lezen.-->
+    <br><br>
+      <div id = "result"></div>
+    </div>
+    
+    <div id="makers" class="hidden">
+      <p> Deze pagina gaat over de makers van dit PO. Hieronder staan foto’s en een beschrijving over de makers van deze mooie, goedwerkende site. Zij hebben erg hun best gedaan voor een goed resultaat. Ook hebben we een link van de facebookaccounts erbij gezet. </p>
+      
+      <A href="https://www.facebook.com/jet.vandis?fref=ts"><IMG src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/p160x160/10469327_854937734539450_2351741928634351603_n.jpg?oh=224d92c3b20a3cddfb28a0c26b80a933&oe=5552DE65&__gda__=1431429848_b94deb94f75f4d981bb40b83c9b1593a"></A>
+   <b><i><p>Jet van Dis</b>
+   <br> Dit is Jet. Jet is 15 jaar oud. Hobby’s van Jet zijn hockey en snowboarden. </p></i>
+        
+        <A href="https://www.facebook.com/lukas.kiezebrink?fref=ts"><IMG src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/p160x160/1376333_351809998298753_1228628915_n.jpg?oh=4cdaf89604d7f1942507e3c0552335f3&oe=554FDACA&__gda__=1435192936_a904c86665d5c05234b10adca7387c5d"></A>
+   <b><i><p>Lukas Kiezebrink</b>
+   <br>Dit is Lukas. Lukas is 16 jaar. Zijn hobby’s zijn voetbal en hij vindt het leuk om muziek te luisteren en gitaar te spelen.</p></i>
+          
+          <A href="https://www.facebook.com/ahmedje.ahmed?fref=ts"><IMG src="https://dub128.mail.live.com/att/GetAttachment.aspx?tnail=0&messageId=0a529d74-b835-11e4-92f6-d89d675f259c&Aux=910%7c0%7c8D21A58F6211A30%7c%7c0%7c0%7c0%7c0%7c%7c%7c45%7cjet%40vandis.net&cid=11dc15e549c44dfd&maxwidth=220&maxheight=160&size=Att&blob=MHxpbWFnZTEuSlBHfGltYWdlL2pwZWc_3d"></A>
+   <b><i><p>Ahmad al Bawi </b>
+   <br> Dit is Ahmed. Ahmed is 15 jaar oud. Hij vindt het leuk om te gamen, chillen met vrienden en hij besteedt veel tijd aan computers. Dit PO vond hij daarom ook heel leuk om te maken.</p></i>
+            
+            <A href="https://www.facebook.com/sophie.vangemert"><IMG src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/10628264_731873413556471_5076207545636994342_n.jpg?oh=63db46bb733ce5b344a86daaf980e6cb&oe=554BDAD1&__gda__=1430877751_6215fb2a18e77c95d106c0d072540f79"></A>
+   <b><i><p>Sophie van Gemert </b>
+   <br> Dit is Sophie. Sophie is 15 jaar oud.  Zij zit op paardrijden.
+   </p></i>
+   <br><br>
+        </div>
+      
+
+    <div id="inkomen" class="hidden">
+        <p> Welkom op de pagina met de rekenmachine die het inkomen uitrekent. </p>
+      
+    </div>
+
+    <div id="euro_dollar" class="hidden">
+      <p> Welkom op de pagina met de rekenmachine die Euro's omzet in Dollars en de andere kant op. </p>
+      <meta charset="utf-8">
+
+    <title>De valuta omrekenaar</title>
+    
+   <link rel='stylesheet' href='style.css'/>
+   
+  
+   <script src='script.js'></script>
+    <br>
+
+    <form name="mijnForm">
+
+      <input type="radio" id="EuroDollar" name="Valuta" value="Van euro naar dollar" checked>    Van euro naar dollar
+
+     <br>
+
+
+     <input type="radio" id="DollarEuro" name="Valuta" value="Van dollar naar euro">Van dollar naar euro
+     
+    <br>
+    <br>
+    Hoeveel betaal je voor 1 euro? <input id="hoeveelVoorEuro" type="text" placeholder="Voer een bedrag in euro's in">
+    <br>
+    <br>
+    
+    Geef het bedrag
+    <br>
+  
+    <input id="inputNumber" type="text">
+
+    <input type="button" name="knop" value="Bereken" onClick="Bereken()">
+    
+    </form>
+    <br>
+    <br>
+     
+  </div>
+
+    <div id="inkomen" class="hidden">
+        <p> Welkom op de pagina met de rekenmachine die het inkomen uitrekent. </p>
+      <form name="reken">
+        bruto inkomen:<br>
+        <input type="text" size="15" name="Brutoinkomen"><br>
+     </div>
+    
+    <div id="regulier" class="hidden">
+        <p> Welkom op de pagina met de reguliere rekenmahcine. </p>
+      <form name="reken">
+Getal 1:<br>
+<input type="text" size="15" name="getal1"><br>
+Getal 2:<br>
+<input type="text" size="15" name="getal2"><br><br>
+
+<input type=button value="+" id="kop" onclick="Reken('+')">
+<input type=button value="-" id="kop" onclick="Reken('-')">
+<input type=button value="x" id="kop" onclick="Reken('x')">
+<input type=button value="/" id="kop" onclick="Reken('/')"><br><br>
+
+Uitkomst:<br>
+<input type="text" size="15" name="uitkomst"><br><br>
+
+<input type=button value="Opnieuw" id="kop" onclick="Schonen()"></form>
+      <br><br>
+
+  </div>
+</div>
